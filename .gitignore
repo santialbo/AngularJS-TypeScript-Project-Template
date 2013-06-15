@@ -1,0 +1,4 @@
+src/controllers/*.js.map
+src/controllers/*.js
+src/*.js.map
+src/*.js
