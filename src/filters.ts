@@ -12,6 +12,13 @@ module app.filters {
         }
     }
 
+    export class Splice implements IFilter {
+        filter (input: Array, start: number, howMany: number) {
+            return input.splice(start, howMany)
+        }
+    }
+
 }
 
 app.registerFilter('RangeTo', []);
+app.registerFilter('Splice', []);
