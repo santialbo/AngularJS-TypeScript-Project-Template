@@ -5,8 +5,8 @@
 module app.filters {
 
     export class RangeTo implements IFilter {
-        filter (input: string, ...args: any[]) {
-            var out = [], start = parseInt(input), end = parseInt(args[0])
+        filter (start: number, end: number) {
+            var out = []
             for (var i = start; i < end; ++i) out.push(i)
             return out
         }
