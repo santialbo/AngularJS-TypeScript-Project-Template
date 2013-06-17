@@ -22,7 +22,10 @@ module app {
     export module services {}
 
     export interface IController {}
-    export interface IDirective {}
+    export interface IDirective {
+        restrict: string;
+        link($scope: ng.IScope, element: JQuery, attrs: ng.IAttributes): any;
+    }
     export interface IFilter {
         filter (input: any, ...args: any[]): any;
     }
