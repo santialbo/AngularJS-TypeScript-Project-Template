@@ -65,7 +65,7 @@ module app {
      * @param services
      */
     export function registerDirective (className: string, services? = []) {
-        var directive = className.toLowerCase();
+        var directive = className[0].toLowerCase() + className.slice(1);
         services.push(function(){
             return new app.directives[className]();
         });
