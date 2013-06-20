@@ -51,10 +51,7 @@ module app {
      */
     export function registerFilter (className: string, services? = []) {
         var filter = className.toLowerCase();
-        services.push(function(){
-            var obj = new app.filters[className]();
-            return obj.filter;
-        });
+        services.push(() => (new app.filters[className]()).filter);
         angular.module('app.filters').filter(filter, services);
     }
 
@@ -66,9 +63,7 @@ module app {
      */
     export function registerDirective (className: string, services? = []) {
         var directive = className[0].toLowerCase() + className.slice(1);
-        services.push(function(){
-            return new app.directives[className]();
-        });
+        services.push(() => new app.directives[className]());
         angular.module('app.directives').directive(directive, services);
     }
 
@@ -80,9 +75,7 @@ module app {
      */
     export function registerService (className: string, services? = []) {
         var service = className.toLowerCase();
-        services.push(function(){
-            return new app.services[className]();
-        });
+        services.push(() => new app.services[className]());
         angular.module('app.services').factory(service, services);
     }
 }
