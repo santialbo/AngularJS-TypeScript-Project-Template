@@ -15,4 +15,4 @@ module app.directives {
 
 }
 
-app.registerDirective('MyDirective', [])
+app.registerDirective('MyDirective', []);
