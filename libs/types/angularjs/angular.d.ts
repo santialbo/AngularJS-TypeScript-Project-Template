@@ -13,7 +13,7 @@ declare var angular: ng.IAngularStatic;
 ///////////////////////////////////////////////////////////////////////////////
 declare module ng {
 
-    // All service providers extend this export interface
+    // All service providers extend this interface
     export interface IServiceProvider {
         $get(): any;
     }
@@ -46,7 +46,7 @@ declare module ng {
         isUndefined(value: any): bool;
         lowercase(str: string): string;
         /** construct your angular application
-		official docs: export interface for configuring angular modules.
+		official docs: interface for configuring angular modules.
 		see: http://docs.angularjs.org/api/angular.Module
 		*/
         module(
@@ -308,7 +308,7 @@ declare module ng {
         warn: ILogCall;
     }
 
-    // We define this as separete export interface so we can reopen it later for
+    // We define this as separete interface so we can reopen it later for
     // the ngMock module.
     export interface ILogCall {
         (...args: any[]): void;
