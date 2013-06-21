@@ -3,15 +3,21 @@
 'use strict';
 
 // Create and register modules
-var modules = ['app.controllers','app.directives', 'app.filters', 'app.services']
-modules.forEach((module) => angular.module(module, []))
+var modules = ['app.controllers','app.directives', 'app.filters', 'app.services'];
+modules.forEach((module) => angular.module(module, []));
 angular.module('app', modules);
 
 // Url routing
 angular.module('app').config(['$routeProvider',
     function routes($routeProvider: ng.IRouteProvider) {
-        $routeProvider.when('/', { templateUrl: 'views/MyView.html', controller: 'app.controllers.MyController'})
-        $routeProvider.otherwise({ redirectTo: '/'});
+        $routeProvider
+            .when('/', {
+                templateUrl: 'views/MyView.html',
+                controller: 'app.controllers.MyController'
+            })
+            .otherwise({
+                redirectTo: '/'
+            });
     }
 ]);
 
