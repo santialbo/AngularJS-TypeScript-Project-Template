@@ -10,7 +10,7 @@ module app.services {
 
         }
         someMethod () {
-            return this.meaningOfLife;
+            return 'Meaning of life is ' + this.meaningOfLife;
         }
     }
 

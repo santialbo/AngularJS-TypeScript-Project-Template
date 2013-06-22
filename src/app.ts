@@ -80,7 +80,7 @@ module app {
      * @param services
      */
     export function registerService (className: string, services? = []) {
-        var service = className.toLowerCase();
+        var service = className[0].toLowerCase() + className.slice(1);
         services.push(() => new app.services[className]());
         angular.module('app.services').factory(service, services);
     }
