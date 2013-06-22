@@ -1,8 +1,8 @@
-AngularJS and TypeScript project template
-=========================================
+AngularJS and TypeScript super simple project template
+------------------------------------------------------
 
-Very simple project template for writing AngularJS applications using TypeScript in a *TypeScript*-y way. That is:
-- Everything is typed checked thanks to [/borisyankov/DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped).
-- Controllers, filters, directives and services are classes.
+This is a very simple project template for creating AngularJS applications with TypeScript.
 
-This is heavily inspired in [/JakubMrozek/generator-angular-typescript](https://github.com/JakubMrozek/generator-angular-typescript).
+`app.ts` contains all the logic that allows to create controllers, filter, directives and services in a *TypeScript*-y way. A sample controller, filter, directive and service are included and being used in a sample view.
+
+This project is based in [/JakubMrozek/generator-angular-typescript](https://github.com/JakubMrozek/generator-angular-typescript) and uses [/borisyankov/DefinitelyTyped](https://github.com/borisyankov/DefinitelyTyped) for the AngularJS type definitions.
