@@ -1,3 +1,5 @@
+**this project is deprecated and not mantained anymore**
+
 AngularJS and TypeScript super simple project template
 ------------------------------------------------------
 
